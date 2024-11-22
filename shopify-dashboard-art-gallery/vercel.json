@@ -2,22 +2,22 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/Art-Gallery/package.json",
+      "src": "dist/Art-Gallery/**",
       "use": "@vercel/static-build"
     },
     {
-      "src": "src/src-dashboard/package.json",
+      "src": "dist/src-dashboard/**",
       "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
       "src": "/admin/(.*)",
-      "dest": "/src-dashboard/\"$1\"" 
+      "dest": "/src-dashboard/$1"
     },
     {
       "src": "/(.*)",
-      "dest": "/Art-Gallery/\"$1\""
+      "dest": "/Art-Gallery/$1"
     }
   ]
 }

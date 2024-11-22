@@ -12,12 +12,12 @@
   ],
   "routes": [
     {
-      "src": "/admin/(.*)",
-      "dest": "/src-dashboard/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/Art-Gallery/$1"
+    },
+    {
+      "src": "/admin/(.*)",
+      "dest": "/src-dashboard/$1"
     }
   ]
 }

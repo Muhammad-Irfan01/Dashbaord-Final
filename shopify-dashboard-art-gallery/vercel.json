@@ -2,12 +2,18 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/Art-Gallery/index.html",
-      "use": "@vercel/static-build"
+      "src": "dist/Art-Gallery/**/*",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/Art-Gallery"
+      }
     },
     {
-      "src": "dist/src-dashboard/index.html",
-      "use": "@vercel/static-build"
+      "src": "dist/src-dashboard/**/*",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/src-dashboard"
+      }
     }
   ],
   "routes": [
